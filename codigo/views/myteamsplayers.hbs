@@ -1,0 +1,18 @@
+<table align="center" >
+    <tr>
+        <th>ID Jugador</th>
+        <th>Nombre</th>
+        <th>Dorsal</th>
+        <th>Salario</th>
+        <th>Vender</th>
+    </tr>
+{{#each teamplayers}}
+<tr>
+    <th>{{this.PlayerID}}</th>
+    <th>{{this.Lastname}}</th>
+    <th>{{this.Number}}</th>
+    <th>{{this.Salary}}</th>
+    <th><button onclick="sell({{this.PlayerID}}, {{this.Salary}});">x</button></th>
+</tr>
+{{/each}}
+</table>

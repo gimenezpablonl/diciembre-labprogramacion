@@ -55,3 +55,16 @@ function buy(){
     .then(response => response.json())
     .then(res => window.location.href = localhost);
 }
+
+function addTeam(){
+    var url = localhost.concat('myteams');
+    var data = {};
+    data.name = document.getElementById("name").value;
+    var init = { method: 'POST',
+                 headers: {'Content-type' : 'application/json'},
+                 mode: 'cors',
+                 body: JSON.stringify(data)}
+    fetch(url, init)
+    .then(response => response.json())
+    .then(res => window.location.href = localhost.concat('myteams'));
+}

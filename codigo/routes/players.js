@@ -38,9 +38,6 @@ router.route('/')
                     var query = "UPDATE Users SET Users.Money = "+ req.session.money + " WHERE Users.UserID = " + req.session.userid + ";"
                     console.log(query);
                     connection.execute(query)
-                    .then(()=>{
-                        res.json('comprado');
-                    })
                     .catch(error => {
                        console.log(error);
                     });
@@ -50,7 +47,7 @@ router.route('/')
                  });
                 }
             })
-            res.json('error');
+            res.redirect('/');
         })
 router.route('/:id')
     .get((req, res) => {
@@ -69,7 +66,7 @@ router.route('/:id')
             console.log(query);
             connection.execute(query)
             .then(()=>{
-                res.render('index' , {user: req.session.username,money: req.session.money});
+                res.json('vendido');
             })
             .catch(error => {
                console.log(error);

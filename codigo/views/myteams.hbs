@@ -1,20 +1,15 @@
+<button><a href="/myteams/create" target="_blank">Agregar equipo</a></button>
 <table align="center" >
     <tr>
-        <th>Equipo</th>
-        <th>ID Jugador</th>
-        <th>Nombre</th>
-        <th>Dorsal</th>
-        <th>Salario</th>
-        <th>Vender</th>
+        <th>ID Equipo</th>
+        <th>Nombre equipo</th>
+        <th>Ver jugadores</th>
     </tr>
 {{#each teams}}
 <tr>
+    <th>{{this.TeamID}}</th>
     <th>{{this.TeamName}}</th>
-    <th>{{this.PlayerID}}</th>
-    <th>{{this.Lastname}}</th>
-    <th>{{this.Number}}</th>
-    <th>{{this.Salary}}</th>
-    <th><button onclick="sell({{this.PlayerID}}, {{this.Salary}});">x</button></th>
+    <th><button ><a href="/myteams/{{this.TeamID}}">Ver jugadores</a></button></th>
 </tr>
 {{/each}}
 </table>
