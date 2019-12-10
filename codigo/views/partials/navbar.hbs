@@ -1,0 +1,27 @@
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Diciembre
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    {{#if user}}
+    <a href="/">Inicio</a>
+    <a href="/myteams">Mis equipos</a>
+    <a href="/players">Jugadores</a>
+    <a href="/logout">Cerrar sesión</a>
+    {{else}}
+    <a href="/login">Iniciar sesión</a>
+    <a href="/register">Registrarse</a>
+    {{/if}}
+  </div>
+</div>

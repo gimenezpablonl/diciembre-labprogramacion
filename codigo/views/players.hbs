@@ -1,0 +1,18 @@
+<button><a href="/players/buy" target="_blank">Comprar jugadores</a></button>
+<table align="center" >
+    <tr>
+        <th>ID Equipo (1 = Agente libre)</th>
+        <th>ID Jugador</th>
+        <th>Nombre</th>
+        <th>Dorsal</th>
+        <th>Salario</th>
+    </tr>
+{{#each players}}
+<tr>
+    <th>{{this.TeamID}}</th>
+    <th>{{this.PlayerID}}</th>
+    <th>{{this.Lastname}}</th>
+    <th>{{this.Number}}</th>
+    <th>{{this.Salary}}</th>
+</tr>
+{{/each}}
